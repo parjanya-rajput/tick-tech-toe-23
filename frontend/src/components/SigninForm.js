@@ -50,40 +50,6 @@ function SigninForm() {
 
 
   return (
-    // <div className='form-cont'>
-    //   <div className='form-cont-form'>
-    //   <h1>Login</h1>
-    //   <form onSubmit={handleSubmit}>
-    //     <label>
-    //            <p  className='form-label'>Email</p>
-    //            <input 
-    //             type="email" 
-    //             name="email" 
-    //             placeholder="Your Email" 
-    //             required  onChange={(e)=>setEmail(e.target.value)} 
-    //            />
-    //     </label>
-    //     <label>
-    //            <p className='form-label'>Password</p>
-    //            <input
-    //                 type="password" 
-    //                 name="password" 
-    //                 placeholder="Your Password" 
-    //                 required
-    //                 value = {password} 
-    //                 onChange = {handlePassword}  
-    //             />
-    //             <div style = {{ color: "red" }}> {errorMessage} </div>
-    //     </label>
-    //       <button type="submit">
-    //           SUBMIT
-    //       </button>
-    //   </form>
-    //   <Link  to='/' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>
-    //                 Sign up
-    //   </Link>
-    //   </div>
-    // </div>
 
     <div className='form-cont'>
       <div className='form-cont-form'>
