@@ -101,12 +101,22 @@ span.navbar-text {
   flex-direction: row;
   padding-top: 80px;
 }
+.home-cont{
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+.home-cont img{
+  width: 80%;
+}
 .form-cont{
   width: 50%;
   float: right;
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .form-cont-form{
   width: 80%;
@@ -114,6 +124,8 @@ span.navbar-text {
   background: white;
   color: #000;
   padding: 10px;
+  text-align: center;
+  margin-top: 20px;
 }
 .signup-form label {
   display: flex;
@@ -122,6 +134,7 @@ span.navbar-text {
   margin-bottom: 4px;
   color: #000;
   font-weight: 900;
+  text-align: left;
 }
 .signup-form label input{
   margin-top: 10px;
@@ -146,5 +159,40 @@ span.navbar-text {
 .button-cont{
   display: flex;
   justify-content: center;
+}
+@media (max-width: 1100px) and ( min-width: 701px){
+  .home-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      justify-content: center;
+      align-items: center;
+    }
+    .home-cont{
+      width: 80%;
+    }
+    .form-cont{
+      width: 80%;
+    }
+}
+@media (max-width: 700px) {
+  .home-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    justify-content: center;
+  }
+  .home-cont {
+    width: 95%;
+  }
+  .form-cont {
+    align-items: center;
+    width: 100%;
+  }
+  .form-cont-form{
+    width: 90%;
+  }
 }
 /*HomePage CSS End*/
