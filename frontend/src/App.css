@@ -93,3 +93,59 @@ span.navbar-text {
   }
 }
 /* Navbar CSS End */
+
+/*HomePage CSS Start*/
+.home-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 80px;
+}
+.form-cont{
+  width: 50%;
+  float: right;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.form-cont-form{
+  width: 80%;
+  border-radius: 20px;
+  background: white;
+  color: #000;
+  padding: 10px;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.form-label{
+  font-weight: 900;
+}
+.form label input{
+  margin-top: 10px;
+  padding: 10px;
+  border: #000 0.5px solid;
+  border-radius: 10px;
+  color: #000;
+  resize: vertical;
+}
+.form button[type='submit'] {
+  width: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #46b146;
+  color: #000;
+  font-weight: 800;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button-cont{
+  display: flex;
+  justify-content: center;
+}
+/*HomePage CSS End*/
