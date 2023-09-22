@@ -55,14 +55,25 @@ export const NavBar = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              aria-label="about"
-              to="/about"
+              aria-label="donate"
+              to="/donate"
               className={
-                activeLink === 'about' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'donate' ? 'active navbar-link' : 'navbar-link'
               }
-              onClick={() => setActiveLink('about')}
+              onClick={() => setActiveLink('donate')}
             >
-              About
+              Donate
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              aria-label="signup"
+              to="/signup"
+              className={
+                activeLink === 'signup' ? 'active navbar-link' : 'navbar-link'
+              }
+              onClick={() => setActiveLink('signup')}
+            >
+              Sign-Up
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
