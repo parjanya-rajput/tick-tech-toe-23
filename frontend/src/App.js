@@ -2,7 +2,7 @@ import './App.css'
 import { HomePage } from './Pages/HomePage'
 import { Route, Routes } from 'react-router-dom'
 import { BrowserRouter } from 'react-router-dom'
-
+import FormInfo from './components/FormInfo'
 function App() {
 
    return (
@@ -10,6 +10,7 @@ function App() {
          <BrowserRouter>
             <Routes>
                <Route exact path="/" element={<HomePage />} />
+               <Route exact path="/FormInfo" element={<FormInfo />} />
             </Routes>
          </BrowserRouter>
       </div>
