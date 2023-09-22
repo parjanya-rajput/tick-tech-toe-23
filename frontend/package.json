@@ -7,6 +7,7 @@
     "bootstrap": "^5.2.3",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
+    "ethers": "^6.7.1",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
@@ -18,6 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start-win": "react-scripts start",
     "start": "./node_modules/react-scripts/bin/react-scripts.js start",
     "start:prod": "pushstate-server build",
     "build": "./node_modules/react-scripts/bin/react-scripts.js build",
