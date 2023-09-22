@@ -4,26 +4,28 @@ function SignupForm() {
   return (
     <div className='form-cont'>
       <div className='form-cont-form'>
-      <h1>REGISTER</h1>
-      <form className='signup-form'>
-        <label>
-               <p style={{ fonstSize: 'xx-large' }} className='form-label'>Name</p>
-               <input type="text" name="name" placeholder="Your Name" required />
-        </label>
-        <label>
-               <p style={{ fonstSize: 'xx-large' }}className='form-label'>Email</p>
-               <input type="email" name="email" placeholder="Your E-mail" required />
-        </label>
-        <div className='button-cont'>
-          <button type="submit">
-              SUBMIT
-          </button>
-        </div>
-      </form>
+        <center>
+          <h1>Log In</h1>
+        </center>
+        <form className='signup-form'>
+          <label>
+            <p style={{ fonstSize: 'xx-large' }} className='form-label'>E-mail</p>
+            <input type="email" name="email" placeholder="Your E-mail" required />
+          </label>
+          <label>
+            <p style={{ fonstSize: 'xx-large' }} className='form-label'>Password</p>
+            <input type="password" name="password" placeholder="Enter your password" required />
+          </label>
+          <div className='button-cont'>
+            <button type="submit">
+              Sign In
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
-   
+
   )
 }
 
