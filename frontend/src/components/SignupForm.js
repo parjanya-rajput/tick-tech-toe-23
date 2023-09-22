@@ -5,7 +5,7 @@ function SignupForm() {
     <div className='form-cont'>
       <div className='form-cont-form'>
       <h1>REGISTER</h1>
-      <form className='form'>
+      <form className='signup-form'>
         <label>
                <p style={{ fonstSize: 'xx-large' }} className='form-label'>Name</p>
                <input type="text" name="name" placeholder="Your Name" required />
