@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.forminfomain{
+    background-color: black;
+    width:100vw;
+    border:1px solid black;
+}
+form label{
+    color:rgb(223, 222, 222);
+}
+.form{
+    position: relative;
+    left:30%;
+}
+.form input{
+    color:white;
+}
+.form .formcon{
+    width:600px;
+    border:1px solid gray;
+    margin-top:10px;
+    border-radius: 10px;
+    height: 100px;
+    background-color: #2c2c2c;
+    padding:10px;
+    padding-left:40px;
+}
+.form .formcon input{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    border-bottom: grey solid 1px;
+}
+.form .formcon label{
+    /* border:1px solid red; */
+    margin-bottom: 20px;
+}
+.form .formcon .radio{
+    margin-left:30px;
+}
+.form .formcon .inradio{
+    margin-left:20px ;
+}
+.buttons{
+    margin-top:20px;    
+    display: flex;
+    width: fit-content;
+}
+.buttons .btn input{
+    width:100px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.buttons .reset input{
+    background-color: lightcoral;
+}
+.buttons .btn button{
+    width:100px;
+    height: 40px;
+}

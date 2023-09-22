@@ -1,44 +1,98 @@
 import React from 'react'
+import { useState } from 'react';
 import './forminfo.css'
 function FormInfo() {
+  const [name,setName] = useState();
+  const [gender,setGender] = useState();
+  const [contact,setContact] = useState();
+  const [address,setAddress] = useState();
+  const [addharnumber,setAddharnumber] = useState();
+  const [aidneeded,setAidneeded] = useState();
+  const [total,setTotal] = useState();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+}
   return (
-    <div>
-      <form className='form'>
-        <div>
-        <label htmlFor="name">Name : </label>
+    <div className='forminfomain'>
+      <form className='form' onSubmit={handleSubmit}>
+        <div className='formcon'>
+        <label htmlFor="name">Name</label><br />
         <input 
           type="text" 
           name="name" 
           id="name"
+          placeholder='your answer'
+          onChange={(e)=>setName(e.target.value)}
          />
         </div>
-        <div>
-          <label htmlFor="gender">Gender : </label>
-          <input type="radio" name="Gender" id="female" className='radio'/><label htmlFor="female">Female</label>
-          <input type="radio" name="Gender" id="male"className='radio' /><label htmlFor="male">Male</label>
-          <input type="radio" name="Gender" id="other"className='radio' /><label htmlFor="other">Other</label>
+        <div className='formcon'>
+          <label htmlFor="gender">Gender</label><br />
+          <input type="radio" name="Gender" id="female" className='radio1' onChange={(e)=>setGender(e.target.value)}/><label className='inradio' htmlFor="female">Female</label>
+          <input type="radio" name="Gender" id="male"className='radio' onChange={(e)=>setGender(e.target.value)} /><label className='inradio' htmlFor="male">Male</label>
+          <input type="radio" name="Gender" id="other"className='radio' onChange={(e)=>setGender(e.target.value)} /><label className='inradio' htmlFor="other">Other</label>
         </div>
-        <div>
-          <label htmlFor="contact">Contact</label>
-          <input type="tel" name="contact" id="contact" placeholder='ContactNumber'/>
+        <div className='formcon'>
+          <label htmlFor="contact">Contact</label><br />
+          <input 
+            type="tel" 
+            name="contact" 
+            id="contact" 
+            placeholder='your answer'
+            onChange={(e)=>setContact(e.target.value)}
+          />
         </div>
-        <div>
-          <label htmlFor="address">Address</label>
-          <textarea name="" id="" cols="50" rows="3"></textarea>
+        <div className='formcon'>
+          <label htmlFor="address">Address</label><br />
+          <input 
+          type="text" 
+          name="address" 
+          id="address"
+          placeholder='your answer'
+          onChange={(e)=>setAddress(e.target.value)}
+         />
         </div>
-        <div>
-          <label htmlFor="addharnumber">Addhar number</label>
-          <input type="text" name="addharnumber" id="addharnumber" />
+        <div className='formcon'>
+          <label htmlFor="addharnumber">Addhar number</label><br />
+          <input 
+            type="text" 
+            name="addharnumber" 
+            id="addharnumber" 
+            placeholder='your answer'
+            onChange={(e)=>setAddharnumber(e.target.value)}
+          />
         </div>
-        <div>
-          <label htmlFor="aidneeded">Aid needed</label>
-          <input type="text" name="aidneeded" id="aidneeded" />
+        <div className='formcon'>
+          <label htmlFor="aidneeded">Aid needed</label><br />
+          <input 
+            type="text" 
+            name="aidneeded" 
+            id="aidneeded" 
+            placeholder='your answer'
+            onChange={(e)=>setAidneeded(e.target.value)}
+          />
         </div>
-        <div>
-          <label htmlFor="total">Total Family Members : </label>
-          <input type="text" name="aidneeded" id="aidneeded" />
+        <div className='formcon'>
+          <label htmlFor="total">Total Family Members</label><br />
+          <input 
+          type="text"
+           name="total" 
+           id="total" 
+           placeholder='your answer'
+           onChange={(e)=>setTotal(e.target.value)}
+           />
         </div>
-        
+        <div className='buttons'>
+          <div className="btn">
+            <input type="submit" value="Submit" />
+          </div>
+          <div className='btn reset'>
+            <input type="reset" value="Reset" />
+          </div>
+          <div className="btn add">
+            <button>ADD</button>
+          </div>
+        </div>
       </form>
     </div>
 
