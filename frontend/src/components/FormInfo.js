@@ -90,7 +90,7 @@ function FormInfo() {
             <input type="reset" value="Reset" />
           </div>
           <div className="btn add">
-            <button>ADD</button>
+            <button className='btn'>ADD</button>
           </div>
         </div>
       </form>

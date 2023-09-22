@@ -4,13 +4,11 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
-function SignupForm() {
+function SigninForm() {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [password1, setPassword1] = useState();
   const [errorMessage, setErrorMessage] = useState("");
-  const [errorMessage1, setErrorMessage1] = useState("");
 
     function handlePassword(event) {
       //-------------------------password validation-------------------------//
@@ -37,52 +35,60 @@ function SignupForm() {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post('http://localhost:3002/register',{email, password ,password1})
+      axios.post('http://localhost:3002/signinform',{email, password})
       .then(result => {
-          console.log(result)
-          navigate('/signinform');//go to login page
+        if(result.data == "Success"){
+            navigate('/forminfo');//go to login page
+        }
+        else{
+           alert("first Signup or password Wrong");
+        }
       })
       .catch(err => console.log(err))
   }
 
-  function handlePassword1(event) {
-    //-------------------------both password are same or not check-------------------------//
-    let new_pass = event.target.value;
-    setPassword1(new_pass);
 
-    if(new_pass != password){
-        setErrorMessage1("Both are not same");
-    }else{
-        console.log(new_pass  + "  * " + setPassword);
-        setErrorMessage1("Both are same");
-    }
-
- }
 
   return (
+
     <div className='form-cont'>
       <div className='form-cont-form'>
-      <h1>REGISTER</h1>
-      <form className='signup-form'>
+      <h1>Login</h1>
+      <form className='signup-form' onSubmit={handleSubmit}>
         <label>
-               <p style={{ fonstSize: 'xx-large' }} className='form-label'>Name</p>
-               <input type="text" name="name" placeholder="Your Name" required />
+               <p style={{ fonstSize: 'xx-large' }} className='form-label'>Email</p>
+               <input 
+                type="email" 
+                name="email" 
+                placeholder="Your Email" 
+                required onChange={(e)=>setEmail(e.target.value)} 
+               />
         </label>
         <label>
-               <p style={{ fonstSize: 'xx-large' }}className='form-label'>Email</p>
-               <input type="email" name="email" placeholder="Your E-mail" required />
+               <p style={{ fonstSize: 'xx-large' }}className='form-label'>Password</p>
+               <input 
+                type="password" 
+                name="password" 
+                placeholder="Your Password" 
+                required 
+                value = {password} 
+                onChange = {handlePassword}  
+               />
+               <div style = {{ color: "red" }}> {errorMessage} </div>
         </label>
-        <div className='button-cont'>
-          <button type="submit">
+        <button type="submit">
               SUBMIT
-          </button>
-        </div>
+        </button>
       </form>
+      <Link  to='/' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>
+                 Sign up
+      </Link>
       </div>
     </div>
 
-
+    
+   
   )
 }
 
-export default SignupForm
+export default SigninForm
