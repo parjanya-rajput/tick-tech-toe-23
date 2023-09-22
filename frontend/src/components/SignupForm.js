@@ -63,22 +63,14 @@ function SignupForm() {
     <div className='form-cont'>
       <div className='form-cont-form'>
       <h1>REGISTER</h1>
-      <form className='signup-form' onSubmit={handleSubmit}>
+      <form className='signup-form'>
         <label>
-               <p style={{ fonstSize: 'xx-large' }} className='form-label'>Email</p>
-               <input type="email" name="email" placeholder="Your Email" required  onChange={(e)=>setEmail(e.target.value)} />
+               <p style={{ fonstSize: 'xx-large' }} className='form-label'>Name</p>
+               <input type="text" name="name" placeholder="Your Name" required />
         </label>
         <label>
-               <p style={{ fonstSize: 'xx-large' }}className='form-label'>Password</p>
-               <input type="password" name="password" placeholder="Your Password" required value = {password} 
-                    onChange = {handlePassword} />
-                <div style = {{ color: "red" }}> {errorMessage} </div>
-        </label>
-        <label>
-               <p style={{ fonstSize: 'xx-large' }}className='form-label'>Password</p>
-               <input type="password" name="password1" placeholder="confirm password" required value={password1}
-                        onChange = {handlePassword1} />
-                <div style = {{ color: "red" }}> {errorMessage1} </div>
+               <p style={{ fonstSize: 'xx-large' }}className='form-label'>Email</p>
+               <input type="email" name="email" placeholder="Your E-mail" required />
         </label>
         <div className='button-cont'>
           <button type="submit">
@@ -86,13 +78,10 @@ function SignupForm() {
           </button>
         </div>
       </form>
-      <Link  to='/signinform' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>
-                    Login
-      </Link>
       </div>
     </div>
 
-   
+
   )
 }
 

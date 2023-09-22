@@ -18,6 +18,7 @@ const MetaMask = () => {
         }
         else {
             setErrorMessage('Create a metamask account first!');
+            window.open("https://metamask.io/download/", "_blank");
         }
     }
 
