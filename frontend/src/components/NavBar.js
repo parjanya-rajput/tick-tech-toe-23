@@ -64,17 +64,6 @@ export const NavBar = () => {
             >
               Donate
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              aria-label="signup"
-              to="/signup"
-              className={
-                activeLink === 'signup' ? 'active navbar-link' : 'navbar-link'
-              }
-              onClick={() => setActiveLink('signup')}
-            >
-              Sign-Up
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
