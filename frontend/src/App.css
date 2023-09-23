@@ -230,6 +230,22 @@ span.navbar-text {
 }
 /*HomePage CSS End*/
 
+/*LoginPage CSS Start*/
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form-cont {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*LoginPage CSS Start*/
+
 /*MetaMask CSS Start*/
 .metamask-page-cont {
   width: 100vw;

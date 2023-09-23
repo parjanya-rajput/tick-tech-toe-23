@@ -15,10 +15,7 @@ const ConnectWalletButton = () => {
         }
         else {
             setErrorMessage('Create a metamask account first!')
-            setTimeout(() => {
-                setErrorMessage(null)
-                window.open("https://metamask.io/download/", "_blank")
-            }, 3000)
+            window.open("https://metamask.io/download/", "_blank")
         }
     }
 
@@ -32,22 +29,6 @@ const ConnectWalletButton = () => {
             .then(balance => {
                 setUserBalance(ethers.formatEther(balance))
             })
-    }
-
-    async function sendTransaction(e) {
-        let params = [{
-            from: "0x017fd813b86e36519fce65e8a04dbfa03a5735c4",
-            to: "0x2debb4b55b1687c15d61d2fa94696d8d3c00702f",
-            gas: Number(21000).toString(16),
-            gasPrice: Number(2500000).toString(16),
-            value: Number(10000000000000000).toString(16),
-        }]
-
-        let result = await window.ethereum.request({
-            method: "eth_sendTransaction", params
-        }).catch((err) => {
-            console.log(err)
-        })
     }
 
     return (
