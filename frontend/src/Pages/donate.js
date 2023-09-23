@@ -1,5 +1,5 @@
-import MetaMask from "../components/metamask";
-import { NavBar } from "../components/NavBar";
+import MetaMask from "../components/Metamask"
+import { NavBar } from "../components/NavBar"
 
 export const Donate = () => {
     return (

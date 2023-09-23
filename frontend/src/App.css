@@ -290,7 +290,7 @@ span.navbar-text {
 }
 @media(max-width: 751px) and (min-width: 600px){
   .metamask-cont{
-    width: 90%;
+    width: 90%;font-size: small;
   }
   .meta-det-name {
     font-size: medium;
@@ -302,6 +302,7 @@ span.navbar-text {
 @media(max-width: 599px){
   .metamask-cont{
     width: 95%;
+    font-size: small;
   }
   .meta-det-name {
     font-size: medium;

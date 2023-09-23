@@ -1,18 +1,19 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState } from 'react'
 import './forminfo.css'
 function FormInfo() {
-  const [name,setName] = useState();
-  const [gender,setGender] = useState();
-  const [contact,setContact] = useState();
-  const [address,setAddress] = useState();
-  const [addharnumber,setAddharnumber] = useState();
-  const [aidneeded,setAidneeded] = useState();
-  const [total,setTotal] = useState();
+  const [name,setName] = useState()
+  const [gender,setGender] = useState()
+  const [contact,setContact] = useState()
+  const [address,setAddress] = useState()
+  const [addharnumber,setAddharnumber] = useState()
+  const [aidneeded,setAidneeded] = useState()
+  const [total,setTotal] = useState()
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e);
-}
+    e.preventDefault()
+    console.log(e)
+  }
+  
   return (
     <div className='forminfomain'>
       <form className='form' onSubmit={handleSubmit}>
@@ -95,8 +96,6 @@ function FormInfo() {
         </div>
       </form>
     </div>
-
-   
   )
 }
 

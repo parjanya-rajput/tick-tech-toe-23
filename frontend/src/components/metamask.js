@@ -17,7 +17,7 @@ const MetaMask = () => {
             setErrorMessage('Create a metamask account first!')
             setTimeout(() => {
                 setErrorMessage(null)
-                window.open("https://metamask.io/download/", "_blank");
+                window.open("https://metamask.io/download/", "_blank")
             }, 3000)
         }
     }
@@ -48,7 +48,6 @@ const MetaMask = () => {
         }).catch((err) => {
             console.log(err)
         })
-
     }
 
     return (
