@@ -326,7 +326,9 @@ span.navbar-text {
   transition: all 0.3 ease;
   cursor: pointer;
 }
-
+.data-fetch{
+  color:#000;
+}
 /*Webkit Style Start*/
 ::-webkit-scrollbar {
   display: none;
