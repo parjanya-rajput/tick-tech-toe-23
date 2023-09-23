@@ -19,6 +19,9 @@ body {
   background-color: #181818;
   color: #808080;
 }
+h1,h2{
+  color: #000;
+}
 a,
 li,
 button,
@@ -129,6 +132,7 @@ span.navbar-text {
 }
 .form-cont-form h2{
   margin-bottom: 45px;
+  color:#000;
 }
 .signup-form label {
   display: flex;

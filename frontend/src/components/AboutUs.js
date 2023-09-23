@@ -10,7 +10,7 @@ function AboutUs() {
       <div className="pbox">
       <div className="boxdata">
         <div className="heading">
-          <h1>About Us</h1>
+          <h1 className="abt-us-h">About Us</h1>
         </div>
         <div className="afterpera">
           <p>
@@ -20,7 +20,7 @@ function AboutUs() {
             impartial humanitarian action.
           </p>
         </div>
-        <h1>Our work includes:</h1>
+        <h1 className="abt-us-h">Our work includes:</h1>
         <div className="uldiv">
             <ul>
             <li>
@@ -64,7 +64,7 @@ function AboutUs() {
             the New Zealand Charities Commission.
           </p>
         </div>
-        <h1>Why ReliefAid is effective</h1>
+        <h1  className="abt-us-h">Why ReliefAid is effective</h1>
         <div className="afterpera">
           <p>
             ReliefAid has the experience and networks to provide life-saving
@@ -95,7 +95,7 @@ function AboutUs() {
             </li>
             </ul>
         </div>
-        <h1>Why war zones?</h1>
+        <h1 className="abt-us-h">Why war zones?</h1>
         <div className="afterpera">
           {" "}
           <p>
