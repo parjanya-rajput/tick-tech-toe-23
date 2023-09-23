@@ -112,11 +112,6 @@ const Contracts = () => {
         }
     }
 
-    // const DataStorage = async () => {
-    //     if (contract) {
-
-    //     }
-    // }
     const DataFetch = async () => {
         if (contract) {
             addhar = await contract.methods.getAddhar().call();
