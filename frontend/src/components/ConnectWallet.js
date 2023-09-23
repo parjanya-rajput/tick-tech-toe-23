@@ -33,7 +33,7 @@ const ConnectWalletButton = () => {
 
     return (
         <button className='wallet-button' onClick={ConnectWallet}>
-            {defaultAccount ? 'Connected' : 'Connect wallet'}
+            {defaultAccount ? 'Connected!' : 'Connect wallet'}
         </button>
     )
 }
