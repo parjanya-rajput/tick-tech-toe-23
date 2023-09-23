@@ -10,10 +10,15 @@ form label{
 }
 .form{
     position: relative;
-    width: 60%;
-    z-index: 2;
+    width: 50%;
     background: white;
+    border-radius: 20px;
     padding: 20px;
+}
+@media (max-width: 800px){
+    .form{
+        width: 80%;
+    }
 }
 .form input{
     font-family: "Roboto", sans-serif;
@@ -39,19 +44,14 @@ form label{
 }
 .buttons .btn input, .buttons .reset input, .buttons .btn button, .wallet-button{
     font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
     outline: 0;
-    background: #4CAF50;
+    border-radius: 50px;
+    background: #000;
     width: 100%;
     border: 0;
     color: #FFFFFF;
     font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
     cursor: pointer;
-}
-.buttons .btn input,.buttons .reset input,.buttons .btn button{
-    padding: 15px;
 }
 .radio-container {
     display: flex;
@@ -61,8 +61,5 @@ form label{
 .inradio {
     float: left;
     width: 60%;
-}
-.radio-container input[type="radio"] {
-    width: 40%;
-    float: right;
+    margin-left: 10px;
 }

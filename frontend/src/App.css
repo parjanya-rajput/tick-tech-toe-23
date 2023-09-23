@@ -102,104 +102,93 @@ span.navbar-text {
 .home-container {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  padding-top: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .home-cont {
-  width: 50%;
-  float: left;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.home-cont img {
-  width: 80%;
+.landing-gradient-h{
+  font-size: 500%;
+  font-weight: 900;
 }
 .form-cont {
-  width: 50%;
-  float: right;
-  margin-top: 20px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .form-cont-form {
-  width: 80%;
-  background: #FFFFFF;
+  width: 500px;
+  margin: auto;
+  background: rgb(0, 181, 185);
+  background: linear-gradient(152deg, rgba(0, 181, 185, 1) 0%, rgba(5, 118, 148, 1) 35%, rgba(0, 97, 117, 1) 100%);
+  border-radius: 20px;
   color: #000;
   padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin-bottom: 20px;
 }
-.form-cont-form h2{
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+.form-cont-form h1{
   margin-bottom: 45px;
   color:#000;
+  font-size: 350%;
+  font-weight: 700;
 }
 .signup-form label {
   display: flex;
   flex-direction: column;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  border-bottom: #000 0.5px solid;
+  margin-bottom: 6px;
   color: #000;
   text-align: left;
 }
 .signup-form label input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #f2f2f2;
+  background: none;
   width: 100%;
   border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
+  padding: 15px 0;
   box-sizing: border-box;
   font-size: 14px;
 }
+.button-cont{
+  margin-top: 40px;
+}
 .signup-form button{
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
-  width: 100%;
   border: 0;
+  margin-bottom: 10px;
+  background: #000;
+  border-radius: 50px;
+  width: 80%;
   padding: 15px;
-  color: #FFFFFF;
+  color: #fff;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
 }
-@media (max-width: 1100px) and (min-width: 701px) {
-  .home-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-    justify-content: center;
-    align-items: center;
-  }
-  .home-cont {
-    width: 80%;
-  }
-  .form-cont {
-    width: 80%;
-  }
-}
-@media (max-width: 700px) {
-  .home-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-    justify-content: center;
-  }
-  .home-cont {
-    width: 95%;
-  }
-  .form-cont {
-    align-items: center;
-    width: 100%;
+@media ( max-width: 900px){
+  .landing-gradient-h {
+    font-size: 200%;
   }
   .form-cont-form {
-    width: 90%;
+    width: 70%;
   }
 }
 /*HomePage CSS End*/
@@ -213,7 +202,7 @@ span.navbar-text {
   justify-content: center;
 }
 .login-form-cont {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,37 +211,38 @@ span.navbar-text {
 
 /*MetaMask CSS Start*/
 .metamask-page-cont {
+  position: absolute;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background: #000;
 }
-.metamask-cont {
-  width: 40%;
-  background: #FFFFFF;
-  color: #000;
-  padding: 45px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  z-index: 2;
-}
-.meta-head {
+.meta-head{
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+.metamask-cont {
+  width: 40%;
+  background: rgb(0, 181, 185);
+  background: linear-gradient(152deg, rgba(0, 181, 185, 1) 0%, rgba(5, 118, 148, 1) 35%, rgba(0, 97, 117, 1) 100%);
+  border-radius: 20px;
+  color: #000;
+  padding: 45px;
+}
 .metamask-cont button {
   margin-left: 15px;
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #000;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 50px;
   border: 0;
   padding: 15px;
-  color: #FFFFFF;
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
   cursor: pointer;
 }
 .meta-details {
@@ -285,11 +275,11 @@ span.navbar-text {
   width: 100vw;
   min-height: 100vh;
   position: absolute;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   background: rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 @media (max-width: 1350px) and (min-width: 981px){
   .metamask-cont{

@@ -7,91 +7,66 @@ function AboutUs() {
       <div className="navbox">
         <NavBar />
       </div>
+      <div className="abt-us-blank" />
       <div className="pbox">
       <div className="boxdata">
-        <div className="heading">
-          <h1 className="abt-us-h">About Us</h1>
-        </div>
         <div className="afterpera">
           <p>
-            ReliefAid is an international humanitarian organisation with a
-            vision of saving lives and alleviating suffering of people affected
-            by armed conflict and natural disasters through independent and
-            impartial humanitarian action.
+           SparkAid is a global humanitarian entity committed to its mission of safeguarding lives and mitigating the hardship endured by individuals impacted by armed conflicts and natural catastrophes. We achieve this through principled and unbiased humanitarian interventions, serving as a beacon of hope for those in need.
           </p>
         </div>
         <h1 className="abt-us-h">Our work includes:</h1>
         <div className="uldiv">
             <ul>
             <li>
-                accessing conflict affected countries, such as Syria, Ukraine and
-                Afghanistan in areas where few aid agencies are able or willing to
-                operate
+                Operating in conflict-affected regions like Syria, Ukraine, and Afghanistan, where few humanitarian agencies are capable or willing to provide assistance, is a fundamental aspect of SparkAid's mission. We are dedicated to accessing and delivering aid in areas that face significant challenges, ensuring that those in dire need receive the help they require, regardless of the obstacles we encounter.
             </li>
             <li>
-                providing life-saving aid, such as shelter materials (blankets,
-                tarpaulins, cooking sets and children’s clothing), food and medical
-                supplies to families in war zones and those affected by natural
-                disasters who otherwise wouldn’t receive any assistance
+                SparkAid is committed to delivering critical life-saving aid, including essential shelter materials such as blankets, tarpaulins, cooking sets, and children's clothing, along with vital provisions of food and medical supplies. Our focus is on reaching families residing in war-torn zones and those who have been impacted by natural disasters, especially those who might not receive assistance from any other source. We strive to ensure that these vulnerable individuals receive the assistance they need to survive and rebuild their lives.
             </li>
             <li>
-                working directly on the ground, in the places aid is most needed and
-                least accessible
+                At SparkAid, our approach is hands-on and direct. We operate directly on the ground in the very locations where aid is most urgently required and often least accessible. Our commitment is unwavering, as we work tirelessly to bridge the gap and bring essential humanitarian assistance to those facing the greatest challenges and hardships.
             </li>
             <li>
-                supporting children in their education, providing hope for the
-                future
+                One of SparkAid's core missions is to support children in their education, offering a beacon of hope for their future. We firmly believe that education is a powerful tool for empowerment and resilience. By providing access to quality education in areas affected by conflict and disasters, we aim to inspire and equip young minds with the knowledge and skills they need to build a brighter, more promising future for themselves and their communities.
             </li>
-            <li>mentoring the next generation of aid workers</li>
+              <li>
+                Mentoring the next generation of aid workers is an integral part of SparkAid's commitment to sustainable humanitarian efforts. We understand that passing on knowledge, experience, and values to aspiring aid workers is essential for the continued success of our mission. Through mentorship programs and training initiatives, we nurture and empower individuals who are dedicated to making a positive impact in the field of humanitarian aid, ensuring that there will always be compassionate and skilled individuals ready to respond to crises and alleviate suffering in the years to come.  
+            </li>
             <li>
-                speaking out on behalf of the men, women and children whose voices
-                are often silenced by conflict
+                At SparkAid, we proudly advocate on behalf of the men, women, and children whose voices are frequently stifled by the ravages of conflict. We recognize the importance of amplifying their stories, needs, and rights, serving as a powerful voice for those who are often unheard and overlooked in the midst of turmoil. By raising awareness and advocating for their well-being and protection, we strive to ensure that the world remains attentive and responsive to the plight of those affected by conflict, ultimately working towards a more just and compassionate global community.
             </li>
             </ul>
         </div>
         <div className="afterpera">
           <p>
-            ReliefAid’s actions are driven by the principle of independence and
-            impartiality. Our life-saving humanitarian action is provided on the
-            basis of need, irrespective of religious and political beliefs, race
-            and gender.
+            SparkAid operates on the foundational principles of independence and impartiality. Our humanitarian assistance is delivered solely based on the urgent needs of individuals, without any regard for their religious and political affiliations, race, or gender.
           </p>
         </div>
         <div className="afterpera">
           <p>
-            ReliefAid relies solely on private donations. We do not receive any
-            funding from governmental sources and are a registered charity with
-            the New Zealand Charities Commission.
+            SparkAid depends entirely on private donations for its operations. We do not receive any funding from governmental sources and are officially registered as a charitable organization with the New Zealand Charities Commission.
           </p>
         </div>
-        <h1  className="abt-us-h">Why ReliefAid is effective</h1>
+        <h1  className="abt-us-h">Why SparkAid is effective</h1>
         <div className="afterpera">
           <p>
-            ReliefAid has the experience and networks to provide life-saving
-            humanitarian assistance where it is most needed, in places where
-            other aid organisations cannot or will not operate.
+           SparkAid possesses the experience and extensive networks required to deliver critical humanitarian assistance where it is most urgently required, often in locations where other aid organizations may be unable or unwilling to operate.
           </p>
         </div>
         <div className="uldiv">
             <ul>
             <li>
-                ReliefAid has proven experience – we have successfully provided
-                humanitarian assistance in conflict zones since 2015.
+                SparkAid has a demonstrated track record of success, having effectively delivered humanitarian assistance in conflict zones since 2023.
             </li>
             <li>
-                We have proven experience in warzones and natural disasters – our
-                staff have successfully delivered humanitarian assistance in Syria,
-                Yemen, South Sudan, Pakistan, Afghanistan, Iraq, Turkmenistan,
-                Turkey and Ukraine.
+                We possess substantial expertise in responding to both conflict zones and natural disasters. Our dedicated staff members have effectively delivered humanitarian assistance in a range of challenging environments, including Syria, Yemen, South Sudan, Pakistan, Afghanistan, Iraq, Turkmenistan, Turkey, and Ukraine.
             </li>
             <li>
-                We have existing networks – we have the ability to immediately
-                mobilise on-ground networks to reach those inaccessible to other aid
-                organisations.
+                SparkAid has established and robust on-ground networks that enable us to swiftly mobilize and reach individuals who may be inaccessible to other aid organizations.
             </li>
             <li>
-                Direct action – we are directly involved in the delivery of our
-                humanitarian assistance overseeing all operations.
+                We are actively engaged in the direct delivery of our humanitarian assistance, overseeing all aspects of our operations to ensure effective and accountable aid delivery.
             </li>
             </ul>
         </div>
@@ -99,30 +74,26 @@ function AboutUs() {
         <div className="afterpera">
           {" "}
           <p>
-            Despite fewer wars being experienced globally an intensification of
-            violence has lead to a larger number of people being displaced from
-            their homes.
+            
+While there may be fewer wars occurring globally, an intensification of violence in certain regions has resulted in a greater number of people being forcibly displaced from their homes.
           </p>
         </div>
         <div className="afterpera">
           {" "}
           <p>
-            Over 100 million people are currently displaced due to conflict with
-            civilian populations overwhelmingly paying the price.
+            Currently, over 100 million people are displaced due to conflict, with civilian populations bearing the overwhelming burden of this crisis.
           </p>
         </div>
         <div className="afterpera">
           {" "}
           <p>
-            Those displaced are often isolated, vulnerable and without the
-            services required for basic life support.
+            Many of those displaced find themselves in isolated and vulnerable situations, lacking access to essential services necessary for basic life support.
           </p>
         </div>
         <div className="afterpera">
           {" "}
           <p>
-            Support from the international community has in some cases provided
-            relief but needs greatly outstrip the support being provided.
+            While support from the international community has, in some instances, offered relief, the needs of the affected populations far surpass the support being provided.
           </p>
         </div>
       </div>

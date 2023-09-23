@@ -47,47 +47,11 @@ function SigninForm() {
 
 
   return (
-    // <div className='form-cont'>
-    //   <div className='form-cont-form'>
-    //   <h1>Login</h1>
-    //   <form onSubmit={handleSubmit}>
-    //     <label>
-    //            <p  className='form-label'>Email</p>
-    //            <input 
-    //             type="email" 
-    //             name="email" 
-    //             placeholder="Your Email" 
-    //             required  onChange={(e)=>setEmail(e.target.value)} 
-    //            />
-    //     </label>
-    //     <label>
-    //            <p className='form-label'>Password</p>
-    //            <input
-    //                 type="password" 
-    //                 name="password" 
-    //                 placeholder="Your Password" 
-    //                 required
-    //                 value = {password} 
-    //                 onChange = {handlePassword}  
-    //             />
-    //             <div style = {{ color: "red" }}> {errorMessage} </div>
-    //     </label>
-    //       <button type="submit">
-    //           SUBMIT
-    //       </button>
-    //   </form>
-    //   <Link  to='/' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>
-    //                 Sign up
-    //   </Link>
-    //   </div>
-    // </div>
-
-    <div className='form-cont'>
+    <div className='login-form-cont'>
       <div className='form-cont-form'>
       <h1>Login</h1>
       <form className='signup-form' onSubmit={handleSubmit}>
         <label>
-               <p style={{ fonstSize: 'xx-large' }} className='form-label'>Email</p>
                <input 
                 type="email" 
                 name="email" 
@@ -96,7 +60,6 @@ function SigninForm() {
                />
         </label>
         <label>
-               <p style={{ fonstSize: 'xx-large' }}className='form-label'>Password</p>
                <input 
                 type="password" 
                 name="password" 
@@ -107,13 +70,13 @@ function SigninForm() {
                />
                <div style = {{ color: "red" }}> {errorMessage} </div>
         </label>
+      <div className='button-cont'>
         <button type="submit">
-              SUBMIT
+            Submit
         </button>
+      </div>
       </form>
-      <Link  to='/' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>
-                 Sign up
-      </Link>
+      <Link style={{color: 'black'}}  to='/' >Sign Up</Link>
       </div>
     </div>
     
