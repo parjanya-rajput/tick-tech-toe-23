@@ -112,6 +112,11 @@ const Contracts = () => {
         }
     }
 
+    // const DataStorage = async () => {
+    //     if (contract) {
+
+    //     }
+    // }
     const DataFetch = async () => {
         if (contract) {
             addhar = await contract.methods.getAddhar().call();
@@ -128,6 +133,15 @@ const Contracts = () => {
                     {account ? 'Connected!' : 'Connect wallet'}
                 </button>
             <button onClick={DataFetch}>DataStorage</button>
+            <br />
+            {isDataFetched ? (
+                <div className='data-fetch'>
+                    <h3>Data stored in BlockChain!</h3>
+                    <p>Addhar Number: {addhar}</p>
+                    <p>Contact: {contact}</p>
+                    <p>Address: {address}</p>
+                </div>
+            ) : ('')}
             </div>
     )
 }
