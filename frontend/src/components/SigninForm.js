@@ -36,7 +36,7 @@ function SigninForm() {
       axios.post('http://localhost:8008/login',{email, password})
       .then(result => {
         if(result.data == "Success"){
-            navigate('/aboutus');//go to login page
+            navigate('/form');//go to login page
         }
         else{
            alert("first Signup or password Wrong");

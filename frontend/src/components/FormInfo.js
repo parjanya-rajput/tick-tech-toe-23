@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import './forminfo.css'
-import ConnectWalletButton from "../components/ConnectWallet";
+import './forminfo.css' 
+import ConnectWallet from "../components/Contracts"
 function FormInfo() {
   const [name,setName] = useState()
   const [gender,setGender] = useState()
@@ -80,7 +80,7 @@ function FormInfo() {
             <div className='btn reset'>
               <input type="reset" value="Reset" />
             </div>
-            <ConnectWalletButton />
+          <ConnectWallet />
           </div>
       </form>
     </div>
