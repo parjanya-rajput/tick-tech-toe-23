@@ -3,8 +3,8 @@ import { HomePage } from './Pages/HomePage'
 import { Route, Routes } from 'react-router-dom'
 import { BrowserRouter } from 'react-router-dom'
 import FormInfo from './components/FormInfo'
-import { Donate } from './Pages/donate'
-import SingInForm from './components/SigninForm'
+import { Donate } from './Pages/Donate'
+import { LoginPage } from './Pages/LoginPage'
 function App() {
 
    return (
@@ -12,9 +12,9 @@ function App() {
          <BrowserRouter>
             <Routes>
                <Route exact path="/" element={<HomePage />} />
-               <Route exact path="/FormInfo" element={<FormInfo />} />
+               <Route exact path="/form" element={<FormInfo />} />
                <Route exact path="/donate" element={<Donate />} />
-               <Route exact path="/signinform" element={<SingInForm />} />
+               <Route exact path="/login" element={<LoginPage />} />
             </Routes>
          </BrowserRouter>
       </div>

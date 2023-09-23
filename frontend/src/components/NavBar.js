@@ -1,41 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { Navbar, Nav, Container } from 'react-bootstrap'
+import { useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export const NavBar = () => {
-  const location = useLocation();
-  const [activeLink, setActiveLink] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation()
+  const [activeLink, setActiveLink] = useState('home')
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const { pathname } = location;
+    const { pathname } = location
     if (pathname === '/') {
-      setActiveLink('home');
+      setActiveLink('home')
     } else {
-      setActiveLink(pathname.substring(1));
+      setActiveLink(pathname.substring(1))
     }
-  }, [location]);
+  }, [location])
 
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
-        setScrolled(true);
+        setScrolled(true)
       } else {
-        setScrolled(false);
+        setScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll)
+    window.scrollTo(0, 0)
 
-    // Scroll to top when the active link changes
-    window.scrollTo(0, 0);
-
-    // Remove the event listener when the component unmounts
     return () => {
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, [activeLink]);
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [activeLink])
 
   return (
     <Navbar expand="md" className={scrolled ? 'scrolled' : ''}>
@@ -68,5 +65,5 @@ export const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
-};
+  )
+}
