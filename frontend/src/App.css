@@ -265,7 +265,7 @@ span.navbar-text {
 .blur {
   z-index: 1;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.5);
@@ -312,3 +312,9 @@ span.navbar-text {
   }
 }
 /*MetaMask CSS End*/
+
+/*Webkit Style Start*/
+::-webkit-scrollbar {
+  display: none;
+}
+/*Webkit Style End*/
