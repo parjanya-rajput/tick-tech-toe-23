@@ -1,41 +1,34 @@
-*{
-    color:rgb(178, 175, 175);
+.aboutuspage{
+    color: rgb(178, 175, 175);
 }
-
-
 .aboutuspage::after{
     content: "";
-    /* border: 3px solid red; */
     width:100%;
     height: 100%;
     background-image: url('about.avif');
     background-position: center;
-    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
     z-index: -1;
-    position:absolute;
     left:0px;
-    top:8vh;
+    top:1px;
     opacity: 0.2;
 }
-h1,h2{
+.abt-us-h{
     color:white;
-    cursor: pointer;
-}
-h1:hover{
-    text-decoration: underline;
 }
 .pbox{
     /* border:1px solid yellow; */
 }
 .boxdata{
     margin: auto;
-    /* border:1px solid red; */
     width:700px;
     position: relative;
     
 }
 .heading{
-    /* border: 1px solid red; */
     height: 200px;
     position: relative;
 }

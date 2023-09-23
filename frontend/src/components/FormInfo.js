@@ -18,7 +18,7 @@ function FormInfo() {
   return (
     <div className='forminfomain'>
       <form className='form' onSubmit={handleSubmit}>
-        <h2 style={{textAlign:'center', textColor: 'black'}}>Need Help!</h2>
+        <h2 style={{textAlign:'center', textColor: 'black'}}>Need Help?</h2>
           <input 
             type="text" 
             name="name" 
