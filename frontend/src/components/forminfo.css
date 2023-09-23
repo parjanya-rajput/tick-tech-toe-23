@@ -2,57 +2,67 @@ form label{
     color: #000;
 }
 .forminfomain{
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .form{
     position: relative;
+    width: 60%;
     z-index: 2;
+    background: white;
+    padding: 20px;
 }
 .form input{
-    margin-top:20px;
-    color: #000;
-}
-.form .formcon{
-    width:600px;
-    margin-top:10px;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    padding:15px 40px;
-}
-.form .formcon input{
-    background-color: transparent;
-    border:none;
-    outline: none;
-    border-bottom: black solid 1px;
-}
-.form .formcon .radio{
-    margin-left:30px;
-}
-.form .formcon .inradio{
-    margin-left:20px ;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 .buttons{
     margin-top:20px;    
     display: flex;
     width: fit-content;
 }
-.buttons .btn input{
-    width:100px;
-    height: 40px;
-    background-color: greenyellow;
+.btn{
+    margin-right: 20px;
 }
-.buttons .reset input{
-    background-color: lightcoral;
-    margin-left:30px;
+.wallet-button {
+    padding: 7px;
 }
-.buttons .btn button{
-    width:100px;
-    height: 40px;
-    margin-top:20px;
-    margin-left:30px;
+.buttons .btn input, .buttons .reset input, .buttons .btn button, .wallet-button{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.buttons .btn input,.buttons .reset input,.buttons .btn button{
+    padding: 15px;
+}
+.radio-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40%;
+}
+.inradio {
+    float: left;
+    width: 60%;
+}
+.radio-container input[type="radio"] {
+    width: 40%;
+    float: right;
 }
