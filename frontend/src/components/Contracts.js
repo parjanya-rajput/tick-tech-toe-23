@@ -3,6 +3,9 @@ import Web3 from "web3";
 const web3 = new Web3(window.ethereum);
 var contract = null;
 var account = null;
+var addhar;
+var contact;
+var address;
 const ADDRESS = "0xAFC1fCDB7597dA5C042Cb463aCFD2749B975D710"
 const ABI = [
     {
@@ -88,6 +91,7 @@ const ABI = [
 ]
 const Contracts = () => {
     const [isConneted, setIsConnected] = useState(false)
+    const [isDataFetched, setIsDataFetched] = useState(false)
 
 
     const ConnectWallet = async () => {
@@ -110,23 +114,21 @@ const Contracts = () => {
 
     const DataFetch = async () => {
         if (contract) {
-            var addhar = await contract.methods.getAddhar().call();
-            var contact = await contract.methods.getContact().call();
-            var address = await contract.methods.getAddress().call();
+            addhar = await contract.methods.getAddhar().call();
+            contact = await contract.methods.getContact().call();
+            address = await contract.methods.getAddress().call();
             console.log(addhar, contact, address)
+            setIsDataFetched(true)
         }
     }
 
     return (
-        <div className='metamask-cont'>
             <div className='meta-head' style={{ marginBottom: '45px' }}>
-                <h2>Wallet Connection</h2>
                 <button onClick={ConnectWallet}>
                     {account ? 'Connected!' : 'Connect wallet'}
                 </button>
-                <button onClick={DataFetch}>DataStorage</button>
+            <button onClick={DataFetch}>DataStorage</button>
             </div>
-        </div>
     )
 }
 export default Contracts

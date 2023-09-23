@@ -310,6 +310,23 @@ span.navbar-text {
 }
 /*MetaMask CSS End*/
 
+.meta-head button{
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  border: 0;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background: #000;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
 /*Webkit Style Start*/
 ::-webkit-scrollbar {
   display: none;
