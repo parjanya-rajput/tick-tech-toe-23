@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const EmployeeModel = require('./models/Employee');
+const Employee1Model = require('./models/Employee1');
 
 const app = express()
 app.use(express.json())
@@ -31,6 +32,14 @@ app.post("/login", (req,res) => {
         }
     })
     .catch (err => res.json(err))
+})
+
+app.post('/forminfo', (req, res) => {
+    Employee1Model.create(req.body)
+    .then(employees1 => {
+        res.json(employees1)
+    })
+    .catch(err => res.json(err))
 })
 
 app.post('/register', (req, res) => {
