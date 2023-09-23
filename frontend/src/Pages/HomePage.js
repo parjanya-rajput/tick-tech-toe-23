@@ -1,5 +1,5 @@
 import { NavBar } from '../components/NavBar'
-import SignupForm from '../components/SignupForm'
+import AuthForm from '../components/AuthForm'
 import { HomeCont } from '../components/HomeCont'
 
 export const HomePage = () => {
@@ -8,7 +8,7 @@ export const HomePage = () => {
          <NavBar />
          <div className='home-container'>
             <HomeCont />
-            <SignupForm />
+            <AuthForm />
          </div>
       </div>
    )
