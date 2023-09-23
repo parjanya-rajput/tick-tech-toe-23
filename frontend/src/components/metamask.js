@@ -1,36 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 const ethers = require("ethers")
 
 const MetaMask = () => {
-
-    const [errorMessage, setErrorMessage] = useState(null);
-
-    const [defaultAccount, setDefaultAccount] = useState(null);
-
-    const [userBalance, setUserBalance] = useState(null);
+    const [errorMessage, setErrorMessage] = useState(null)
+    const [defaultAccount, setDefaultAccount] = useState(null)
+    const [userBalance, setUserBalance] = useState(null)
 
     const ConnectWallet = () => {
         if (window.ethereum) {
             window.ethereum.request({ method: 'eth_requestAccounts' })
                 .then(result => {
-                    accountChanged([result[0]]);
+                    accountChanged([result[0]])
                 })
         }
         else {
-            setErrorMessage('Create a metamask account first!');
-            window.open("https://metamask.io/download/", "_blank");
+            setErrorMessage('Create a metamask account first!')
+            setTimeout(() => {
+                setErrorMessage(null)
+                window.open("https://metamask.io/download/", "_blank");
+            }, 3000)
         }
     }
 
     const accountChanged = (accountName) => {
-        setDefaultAccount(accountName);
+        setDefaultAccount(accountName)
         getUserBalance(accountName)
     }
 
     const getUserBalance = (accountAddress) => {
         window.ethereum.request({ method: 'eth_getBalance', params: [String(accountAddress), "latest"] })
             .then(balance => {
-                setUserBalance(ethers.formatEther(balance));
+                setUserBalance(ethers.formatEther(balance))
             })
     }
 
@@ -51,28 +51,31 @@ const MetaMask = () => {
 
     }
 
-
     return (
-        <div>
-            <h1> wallet connection</h1>
-            <button onClick={ConnectWallet}>Connect wallet</button>
-            <h3>Address: {defaultAccount}</h3>
-            <h3>Balance: ${userBalance}</h3>
-            <form onSubmit={sendTransaction}>
-                <h3>Click the donate button to donate</h3>
-
-                <input type="submit" value="Donate" />
-
-            </form>
-
-
-            {errorMessage}
-
-
+        <div className='metamask-cont'>
+            <div className='meta-head'>
+                <h1>Wallet Connection</h1>
+                <button onClick={ConnectWallet}>Connect wallet</button>
+            </div>
+            <div className='meta-details'>
+                <div className='meta-det-cont'>
+                    <div className='meta-det-name'>Address</div>
+                    <div className='meta-det-val'>{defaultAccount}</div>
+                </div>
+                <div className='meta-det-cont'>
+                    <div className='meta-det-name'>Balance</div>
+                    <div className='meta-det-val'>${userBalance}</div>
+                </div>
+                <form onSubmit={sendTransaction}>
+                    <div className='meta-head'>
+                        <h2 style={{ paddingTop: '5px' }}>Click the donate button to donate</h2>
+                        <button type="submit">Donate</button>
+                    </div>
+                </form>
+            </div>
+            {errorMessage && <div>{errorMessage}</div>}
         </div>
     )
-
-
 }
 
-export default MetaMask;
+export default MetaMask
