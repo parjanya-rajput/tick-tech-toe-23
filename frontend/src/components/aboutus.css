@@ -1,0 +1,70 @@
+*{
+    color:rgb(178, 175, 175);
+}
+
+
+.aboutuspage::after{
+    content: "";
+    /* border: 3px solid red; */
+    width:100%;
+    height: 100%;
+    background-image: url('about.avif');
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: -1;
+    position:absolute;
+    left:0px;
+    top:8vh;
+    opacity: 0.2;
+}
+h1,h2{
+    color:white;
+    cursor: pointer;
+}
+h1:hover{
+    text-decoration: underline;
+}
+.pbox{
+    /* border:1px solid yellow; */
+}
+.boxdata{
+    margin: auto;
+    /* border:1px solid red; */
+    width:700px;
+    position: relative;
+    
+}
+.heading{
+    /* border: 1px solid red; */
+    height: 200px;
+    position: relative;
+}
+.heading h1{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.afterpera{
+    padding:20px;
+    line-height: 1.5em;
+    margin:30px 0px 30px 0px;
+    box-shadow: rgba(147, 165, 42, 0.916) 0px 7px 29px 0px;;
+}
+.afterpera p{
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    word-spacing: 0.5em;
+}
+.uldiv{
+    padding:20px;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;     
+}
+.uldiv ul{
+    padding:30px;
+}
+.uldiv ul li{
+    margin-top:30px;
+    font-size: 20px;
+}
