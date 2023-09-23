@@ -19,7 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start-win": "react-scripts start",
+    
+    "start-win": "set PORT = 8008 && react-scripts start",
     "start": "./node_modules/react-scripts/bin/react-scripts.js start",
     "start:prod": "pushstate-server build",
     "build": "./node_modules/react-scripts/bin/react-scripts.js build",
