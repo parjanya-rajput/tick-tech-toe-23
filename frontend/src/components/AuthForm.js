@@ -45,10 +45,11 @@ function AuthForm() {
   };
 
   const handleSubmit = (e) => {
+    console.log(e);
     e.preventDefault();
     if (isSignup) {
       axios
-        .post('http://localhost:3002/register', { email, password, password1 })
+        .post('http://localhost:3002', { email, password, password1 })
         .then((result) => {
           console.log(result);
           navigate('/login');
@@ -56,7 +57,7 @@ function AuthForm() {
         .catch((err) => console.log(err));
     } else {
       axios
-        .post('http://localhost:3002/signinform', { email, password })
+        .post('http://localhost:3002', { email, password })
         .then((result) => {
           if (result.data === 'Success') {
             navigate('/forminfo');
@@ -120,9 +121,10 @@ function AuthForm() {
               <div style={{ color: 'red' }}>{errorMessage1}</div>
             </label>
           )}
-          <div className='button-cont'>
+          <div className='button-cont' >
             <button type='submit'>SUBMIT</button>
           </div>
+
         </form>
       </div>
     </div>

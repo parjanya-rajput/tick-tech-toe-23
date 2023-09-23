@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { FormPage } from './Pages/FormPage'
 import { Donate } from './Pages/Donate'
+import AboutUs from './components/AboutUs'
 function App() {
 
    return (
@@ -13,6 +14,7 @@ function App() {
                <Route exact path="/" element={<HomePage />} />
                <Route exact path="/form" element={<FormPage />} />
                <Route exact path="/donate" element={<Donate />} />
+               <Route exact path="/aboutus" element={<AboutUs />} />
             </Routes>
          </BrowserRouter>
       </div>
