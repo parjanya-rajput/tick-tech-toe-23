@@ -52,7 +52,7 @@ const MetaMask = () => {
 
     return (
         <div className='metamask-cont'>
-            <div className='meta-head' style={{marginBottom: '45px'}}>
+            <div className='meta-head' style={{ marginBottom: '45px' }}>
                 <h2>Wallet Connection</h2>
                 <button onClick={ConnectWallet}>Connect wallet</button>
             </div>
@@ -66,7 +66,7 @@ const MetaMask = () => {
                     <div className='meta-det-val'>${userBalance}</div>
                 </div>
                 <form onSubmit={sendTransaction}>
-                    <div className='meta-head' style={{  marginTop: '45px' }}>
+                    <div className='meta-head' style={{ marginTop: '45px' }}>
                         <h2>Click the donate button to donate</h2>
                         <button type="submit">Donate</button>
                     </div>
