@@ -66,7 +66,7 @@ export const NavBar = () => {
               aria-label="aboutus"
               to="/aboutus"
               className={
-                activeLink === 'aboutut' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'aboutus' ? 'active navbar-link' : 'navbar-link'
               }
               onClick={() => setActiveLink('aboutus')}
             >
