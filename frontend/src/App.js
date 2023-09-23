@@ -7,7 +7,6 @@ import { LoginPage } from './Pages/SigninPage'
 import { Donate } from './Pages/Donate'
 import AboutUs from './components/AboutUs'
 import SignupForm from './components/SignupForm'
-import SigninForm from './components/SigninForm'
 function App() {
 
    return (
@@ -19,7 +18,7 @@ function App() {
                <Route exact path="/donate" element={<Donate />} />
                <Route exact path="/aboutus" element={<AboutUs />} />
                <Route exact path="/register" element={<SignupForm />} />
-               <Route exact path="/login" element={<SigninForm />} />
+               <Route exact path="/login" element={<LoginPage />} />
                
             </Routes>
          </BrowserRouter>

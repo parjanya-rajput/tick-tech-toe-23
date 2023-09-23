@@ -53,33 +53,28 @@ function SignupForm(){
  return(
   <div className='form-cont'>
     <div className='form-cont-form'>
-    <h1>REGISTER</h1>
+    <h1>Sign-Up</h1>
     <form className='signup-form' onSubmit={handleSubmit}>
       <label>
-            <p style={{ fonstSize: 'xx-large' }} className='form-label'>Email</p>
             <input type="email" name="email" placeholder="Your Email" required  onChange={(e)=>setEmail(e.target.value)} />
       </label>
       <label>
-            <p style={{ fonstSize: 'xx-large' }}className='form-label'>Password</p>
             <input type="password" name="password" placeholder="Your Password" required value = {password} 
                   onChange = {handlePassword} />
               <div style = {{ color: "red" }}> {errorMessage} </div>
       </label>
       <label>
-            <p style={{ fonstSize: 'xx-large' }}className='form-label'>Password</p>
             <input type="password" name="password1" placeholder="confirm password" required value={password1}
                       onChange = {handlePassword1} />
               <div style = {{ color: "red" }}> {errorMessage1} </div>
       </label>
       <div className='button-cont'>
         <button type="submit">
-            SUBMIT
+            Submit
         </button>
       </div>
     </form>
-    <Link  to='/login' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>
-                  Login
-    </Link>
+    <Link style={{color: 'black'}} to='/login'>Login</Link>
     </div>
   </div>
  )

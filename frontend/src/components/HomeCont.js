@@ -1,7 +1,9 @@
 export const HomeCont = () => {
     return (
         <div className="home-cont">
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/humanitarian-aid-3942206-3575518.png" alt=""/>
+            <h1 className="landing-gradient-h">
+                "SparkAid: Lighting the Path to Compassionate Humanitarian Action"
+            </h1>
         </div>
     )
 }
