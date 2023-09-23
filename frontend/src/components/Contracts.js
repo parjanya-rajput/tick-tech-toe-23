@@ -1,40 +1,10 @@
-import web3 from "./Web3";
-import React, { Component } from "react";
-var num;
-var anum;
-var res;
+import React, { useState, useEffect } from 'react'
+import Web3 from "web3";
+const web3 = new Web3(window.ethereum);
 var contract = null;
 var account = null;
-const ADDRESS = "0xb69234b24faf8c708c9B73a92c0Fff9857d73679"
+const ADDRESS = "0xAFC1fCDB7597dA5C042Cb463aCFD2749B975D710"
 const ABI = [
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_owner",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_contact",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "_residence",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "_addhar",
-                "type": "string"
-            }
-        ],
-        "name": "setData",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
     {
         "inputs": [],
         "name": "getAddhar",
@@ -66,9 +36,9 @@ const ABI = [
         "name": "getContact",
         "outputs": [
             {
-                "internalType": "uint256",
+                "internalType": "string",
                 "name": "",
-                "type": "uint256"
+                "type": "string"
             }
         ],
         "stateMutability": "view",
@@ -86,53 +56,82 @@ const ABI = [
         ],
         "stateMutability": "view",
         "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_owner",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "_contact",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_residence",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_addhar",
+                "type": "string"
+            }
+        ],
+        "name": "setData",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
     }
-];
-(async () => {
-    if (window.ethereum) {
-        await window.ethereum.send('eth_requestAccounts');
-        window.web3 = new Web3(window.ethereum);
+]
+const Contracts = () => {
+    const [isConneted, setIsConnected] = useState(false)
 
-        var accounts = await web3.eth.getAccounts();
-        account = accounts[0];
-        contract = await new web3.eth.Contract(ABI, ADDRESS);
-        document.getElementById('wallet-address').textContent = account;
-        document.getElementById('submit-details').onclick = () => {
-            updateDetails();
+
+    const ConnectWallet = async () => {
+        if (window.ethereum) {
+            window.ethereum.request({ method: 'eth_requestAccounts' });
+            window.web3 = new Web3(window.ethereum);
+
+            var accounts = await web3.eth.getAccounts();
+            account = accounts[0];
+            contract = new web3.eth.Contract(ABI, ADDRESS);
+        }
+        else {
+            console.log('Create a metamask account first!')
+            setTimeout(() => {
+                console.log(null)
+                window.open("https://metamask.io/download/", "_blank")
+            }, 3000)
         }
     }
-})();
-//deploy the contract
-// const bytecode = "0x608060405234801561001057600080fd5b50610947806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80631db10fba1461005c57806338cc48311461007a57806351b38a02146100985780638da5cb5b146100b4578063917d92c6146100d2575b600080fd5b6100646100f0565b60405161007191906102ca565b60405180910390f35b6100826100f9565b60405161008f9190610375565b60405180910390f35b6100b260048036038101906100ad919061056a565b61018b565b005b6100bc6101f9565b6040516100c99190610618565b60405180910390f35b6100da61021f565b6040516100e79190610375565b60405180910390f35b60008054905090565b60606002805461010890610662565b80601f016020809104026020016040519081016040528092919081815260200182805461013490610662565b80156101815780601f1061015657610100808354040283529160200191610181565b820191906000526020600020905b81548152906001019060200180831161016457829003601f168201915b5050505050905090565b83600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508260008190555081600290816101e2919061083f565b5080600390816101f2919061083f565b5050505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60606003805461022e90610662565b80601f016020809104026020016040519081016040528092919081815260200182805461025a90610662565b80156102a75780601f1061027c576101008083540402835291602001916102a7565b820191906000526020600020905b81548152906001019060200180831161028a57829003601f168201915b5050505050905090565b6000819050919050565b6102c4816102b1565b82525050565b60006020820190506102df60008301846102bb565b92915050565b600081519050919050565b600082825260208201905092915050565b60005b8381101561031f578082015181840152602081019050610304565b60008484015250505050565b6000601f19601f8301169050919050565b6000610347826102e5565b61035181856102f0565b9350610361818560208601610301565b61036a8161032b565b840191505092915050565b6000602082019050818103600083015261038f818461033c565b905092915050565b6000604051905090565b600080fd5b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006103d6826103ab565b9050919050565b6103e6816103cb565b81146103f157600080fd5b50565b600081359050610403816103dd565b92915050565b610412816102b1565b811461041d57600080fd5b50565b60008135905061042f81610409565b92915050565b600080fd5b600080fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6104778261032b565b810181811067ffffffffffffffff821117156104965761049561043f565b5b80604052505050565b60006104a9610397565b90506104b5828261046e565b919050565b600067ffffffffffffffff8211156104d5576104d461043f565b5b6104de8261032b565b9050602081019050919050565b82818337600083830152505050565b600061050d610508846104ba565b61049f565b9050828152602081018484840111156105295761052861043a565b5b6105348482856104eb565b509392505050565b600082601f83011261055157610550610435565b5b81356105618482602086016104fa565b91505092915050565b60008060008060808587031215610584576105836103a1565b5b6000610592878288016103f4565b94505060206105a387828801610420565b935050604085013567ffffffffffffffff8111156105c4576105c36103a6565b5b6105d08782880161053c565b925050606085013567ffffffffffffffff8111156105f1576105f06103a6565b5b6105fd8782880161053c565b91505092959194509250565b610612816103cb565b82525050565b600060208201905061062d6000830184610609565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b6000600282049050600182168061067a57607f821691505b60208210810361068d5761068c610633565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b6000600883026106f57fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff826106b8565b6106ff86836106b8565b95508019841693508086168417925050509392505050565b6000819050919050565b600061073c610737610732846102b1565b610717565b6102b1565b9050919050565b6000819050919050565b61075683610721565b61076a61076282610743565b8484546106c5565b825550505050565b600090565b61077f610772565b61078a81848461074d565b505050565b5b818110156107ae576107a3600082610777565b600181019050610790565b5050565b601f8211156107f3576107c481610693565b6107cd846106a8565b810160208510156107dc578190505b6107f06107e8856106a8565b83018261078f565b50505b505050565b600082821c905092915050565b6000610816600019846008026107f8565b1980831691505092915050565b600061082f8383610805565b9150826002028217905092915050565b610848826102e5565b67ffffffffffffffff8111156108615761086061043f565b5b61086b8254610662565b6108768282856107b2565b600060209050601f8311600181146108a95760008415610897578287015190505b6108a18582610823565b865550610909565b601f1984166108b786610693565b60005b828110156108df578489015182556001820191506020850194506020810190506108ba565b868310156108fc57848901516108f8601f891682610805565b8355505b6001600288020188555050505b50505050505056fea2646970667358221220ce372a3520cca2f451b3da0ede8e11b239cd8e6098a441e97796b3f262553acf64736f6c63430008120033";
-// const deploy = async (abi, bytecode) => {
-//    var deployingContract = new web3.eth.Contract(abi).deploy({
-//       data: bytecode,
-//       arguments: []
-//    });
-//    var estimateGas = await deployingContract.estimateGas();
 
-//    var deployedContract = await deployingContract.send({
-//       from: account,
-//       gas: estimateGas,
-//    })
-//    console.log('Address of the contract -' + deployedContract.options.address);
-//    return deployedContract.options.address;
-// }
+    // const DataStorage = async () => {
+    //     if (contract) {
 
-const updateDetails = async () => {
-    if (contract) {
-        await contract.methods.setData(account, num, res, anum).send({
-            from: account,
-            gas: 1000000
-        });
+    //     }
+    // }
+    const DataFetch = async () => {
+        if (contract) {
+            var addhar = await contract.methods.getAddhar().call();
+            var contact = await contract.methods.getContact().call();
+            var address = await contract.methods.getAddress().call();
+            console.log(addhar, contact, address)
+        }
     }
+
+    return (
+        <div className='metamask-cont'>
+            <div className='meta-head' style={{ marginBottom: '45px' }}>
+                <h2>Wallet Connection</h2>
+                <button onClick={ConnectWallet}>
+                    {account ? 'Connected!' : 'Connect wallet'}
+                </button>
+                <button onClick={DataFetch}>DataStorage</button>
+            </div>
+        </div>
+    )
 }
-const getContact = async () => {
-    num = await contract.methods.getContact().call();
-}
-const getAddress = async () => {
-    res = await contract.methods.getAddress().call();
-}
-const getAddhar = async () => {
-    anum = await contract.methods.getAddhar().call();
-}
+export default Contracts
