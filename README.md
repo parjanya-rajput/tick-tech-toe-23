@@ -1,3 +1,5 @@
+GET ALL THE DETAILS OF THE PROJECT HERE: https://docs.google.com/document/d/1oa203xYl8MeW59M61UkelSmbfrSoYtLosV8uakcWO6I/edit?usp=sharing 
+
 # Home Page
 
 ![image](https://github.com/parjanya-rajput/tick-tech-toe-23/assets/70943732/6a4a4512-7aa5-4ac2-8757-a20aa0554883)
