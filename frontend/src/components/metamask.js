@@ -36,7 +36,7 @@ const MetaMask = () => {
 
     async function sendTransaction(e) {
         let params = [{
-            from: "0x017fd813b86e36519fce65e8a04dbfa03a5735c4",
+            from: "0xa0E96A0B72FD705637A9c612eEA0a924B5d9913E",
             to: "0x2debb4b55b1687c15d61d2fa94696d8d3c00702f",
             gas: Number(21000).toString(16),
             gasPrice: Number(2500000).toString(16),
@@ -67,7 +67,7 @@ const MetaMask = () => {
                 </div>
                 <form onSubmit={sendTransaction}>
                     <div className='meta-head' style={{ marginTop: '45px' }}>
-                        <h2>Click the donate button to donate</h2>
+                        <h2>Help us by donating just 0.01ETH towards this website!</h2>
                         <button type="submit">Donate</button>
                     </div>
                 </form>

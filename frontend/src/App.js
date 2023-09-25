@@ -1,3 +1,4 @@
+import {useState,useEffect} from 'react';
 import './App.css'
 import { HomePage } from './Pages/HomePage'
 import { Route, Routes } from 'react-router-dom'
@@ -7,6 +8,8 @@ import { LoginPage } from './Pages/SigninPage'
 import { Donate } from './Pages/Donate'
 import AboutUs from './components/AboutUs'
 import SignupForm from './components/SignupForm'
+const ethers = require("ethers");
+
 function App() {
 
    return (
